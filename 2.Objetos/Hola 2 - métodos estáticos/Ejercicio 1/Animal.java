@@ -18,6 +18,14 @@ public class Animal {
     }
 
     //Métodos
+
+        public int getDados() {
+        System.out.println("Nombre: " + nome + ", Edad: " + idade);
+        return idade;
+    }
+
+
+    
     public void nace(){
         if (vivo) {
             vivo = true; // pongo el boolean a true, aunque ya está de base
@@ -32,10 +40,6 @@ public class Animal {
         
     }
 
-    public int getDados() {
-        System.out.println("Nombre: " + nome + ", Edad: " + idade);
-        return idade;
-    }
 
 
 }

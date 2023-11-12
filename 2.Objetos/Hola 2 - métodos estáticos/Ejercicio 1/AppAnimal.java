@@ -5,7 +5,7 @@ public class AppAnimal {
 
             Animal animal1 = new Animal();
             Animal animal2 = new Animal(2, "Perro", true);
-            Animal animal3 = new Animal(18, "Gato", true);
+            Animal animal3 = new Animal(18, "Gato", false);
     
             animal1.nace();
             animal1.getDados();
