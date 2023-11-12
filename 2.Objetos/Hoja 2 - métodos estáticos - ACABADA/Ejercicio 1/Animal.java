@@ -3,6 +3,7 @@ public class Animal {
     private int idade;
     private String nome;
     private boolean vivo;
+    public static int numeroAnimais;
 
     //Constructores
     public Animal(){
@@ -11,10 +12,11 @@ public class Animal {
         vivo = true;
     }
 
-    public Animal(int idad, String nom, boolean viv){
+    public Animal(int idad, String nom){
         idade = idad;
         nome = nom;
-        vivo = viv;
+        vivo = true;
+
     }
 
     //Métodos
@@ -27,15 +29,17 @@ public class Animal {
 
     
     public void nace(){
-        if (vivo) {
-            vivo = true; // pongo el boolean a true, aunque ya está de base
+   
+            // pongo el boolean a true, aunque ya está de base
+            numeroAnimais++;
             System.out.println("Benvido");
-        }
+    
     }
 
     public void morre() {
   
             vivo = false;
+            numeroAnimais--;
             System.out.println("Adiós");
         
     }
