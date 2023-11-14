@@ -33,11 +33,18 @@ public class Bombilla {
     public void aumentaPotencia(int h){
         int aumento = potencia + h;
 
-        if(aumento > 35 && aumento < 2){
-            potencia = 2;
+        if(aumento > 35){
+            
+            int resto = 35-potencia;
+            potencia = 35;
+
+            potenciaTotal+=resto;
         }
         else{
+
             potencia = aumento;
+
+            potenciaTotal+=h;
         }
        
     }
@@ -46,11 +53,14 @@ public class Bombilla {
     public void baixaPotencia(int h){
         int disminucion = potencia - h;
 
-        if(disminucion > 35 && disminucion < 2){
+        if(disminucion < 2){
+            int resto = 2-potencia;
             potencia = 2;
+            potenciaTotal+=resto;
         }
         else{
             potencia = disminucion;
+            potenciaTotal-=h;
         }
         
     }
@@ -58,6 +68,19 @@ public class Bombilla {
     public static int getValorPotenciaTotal(){
        
         return potenciaTotal;
+
+    }
+
+    public static String comparaBombilla(Bombilla bom1, Bombilla bom2){
+        if ((bom1.getPotencia() > bom2.getPotencia())) {
+            return bom1.nome;
+        }
+        else{
+            return bom2.nome;
+        }
+      
+
+
 
     }
 
