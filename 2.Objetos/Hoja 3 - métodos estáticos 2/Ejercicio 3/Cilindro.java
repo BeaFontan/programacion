@@ -1,6 +1,5 @@
 public class Cilindro {
 
-    
 private double radio;
 private double altura;
 public static final double PI = 3.1416;
@@ -59,14 +58,15 @@ public static double calVolume(Cilindro cil){
 
 public double calculaArea(){
 
-    return Cilindro.calcArea();
+    return 0;
 
 }
 
 public double calculaVolume(){
 
-    return Cilindro.calVolume();
-}
+    return 0;
 
+
+}
 
 }
