@@ -1,3 +1,5 @@
+//3.Fai un programa que pida unha frase, e mostre a mesma sen a primeira ‘a’ da frase.
+
 import java.util.Scanner;
 
 public class AppString1_3 {

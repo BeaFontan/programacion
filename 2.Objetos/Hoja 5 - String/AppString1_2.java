@@ -1,3 +1,5 @@
+//2.Fai un programa que pida un String, e diga a posición da primeira ‘a’ da frase
+
 import java.util.Scanner;
 
 public class AppString1_2 {
