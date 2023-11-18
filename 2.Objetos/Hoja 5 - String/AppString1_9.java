@@ -31,7 +31,7 @@ public class AppString1_9 {
 
 
 
-    teclado.close();
+        teclado.close();
 
 
     }
