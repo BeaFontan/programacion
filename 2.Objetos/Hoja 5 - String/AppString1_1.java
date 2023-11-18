@@ -1,3 +1,6 @@
+//1.Crea unha clase que vaia pedindo frases por teclado, e que repita as que teñan como lonxitude maior
+//que 15 caracteres. Rematará cando a palabra introducida sexa “Fin”.
+
 import java.util.Scanner;
 
 public class AppString1_1 {
