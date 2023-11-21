@@ -11,16 +11,21 @@ public class AppString1_9 {
     Scanner teclado = new Scanner(System.in);
     String respuesta;
 
-
-
     System.out.println("Dime a frase");
     respuesta = teclado.nextLine();
 
 
     while (respuesta.length() > 2) { // mientras la frase introducida tenga más de 2 letras
 
-        respuesta = respuesta.replace('a', 'e');
-        respuesta = respuesta.replace('e', 'a'); //REVISAR ESTO QUE NO ME DA BIEN
+       
+        respuesta = respuesta.replace('a', '.'); // primero las paso a punto para que no sea e, y evitar que me cambie luego las a.
+        //holx que txl
+
+        respuesta = respuesta.replace('e', 'a'); // cambio las e por a
+        //hxlx qua txl
+
+        respuesta = respuesta.replace('.', 'e'); // y ahora cambio los puntos, donde tenía las a salvadas, por e
+        //hele qua tel
 
         System.out.println(respuesta);
 
@@ -29,10 +34,7 @@ public class AppString1_9 {
         
     }
 
-
-
-    teclado.close();
-
+        teclado.close();
 
     }
 }
