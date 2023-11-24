@@ -15,7 +15,6 @@ public class AppString1_14 {
         
         Scanner teclado = new Scanner(System.in);
         String respuesta = "";
-        String frase;
         
 
         System.out.println("Pulsa a para introducir la frase");
@@ -26,21 +25,26 @@ public class AppString1_14 {
         System.out.println("Pulsa g para salir del programa");
         respuesta = teclado.nextLine();        
 
-        while (!respuesta.equals("g")) {
+        while (true) {
 
             switch (respuesta) {
                 case "a":
 
                     System.out.println("Pulsa a para introducir la frase");
-                    frase = teclado.nextLine();
+                    respuesta = teclado.nextLine();
                     
                     break;
                 
                 case "b":
 
-                    
+                    respuesta.toUpperCase();
 
                     break;
+
+                case "c":
+
+
+                break;
             
 
             }
