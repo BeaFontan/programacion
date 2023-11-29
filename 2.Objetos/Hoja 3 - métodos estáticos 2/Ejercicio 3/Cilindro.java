@@ -35,19 +35,18 @@ public void setAltura(double altura) {
 
 
 //métodos estáticos
-public static double calcArea(Cilindro cil){
+public static double calcArea(double radio, double altura){
     double area;
-
-    area = 2* PI * (cil.radio+cil.altura);
+    area = 2* PI * (radio+altura);
 
     return area;
 
 }
 
-public static double calVolume(Cilindro cil){
+public static double calVolume(double radio, double altura){
     double volume;
 
-    volume = PI * (cil.radio*cil.radio) * cil.altura;
+    volume = PI * (radio*radio) * altura;
     
     return volume;
 
@@ -56,15 +55,15 @@ public static double calVolume(Cilindro cil){
 
 //métodos non estáticos
 
-public double calculaArea(){
+public double geTArea(){
 
-    return 0;
+    return calcArea(this.radio, this.altura);
 
 }
 
-public double calculaVolume(){
+public double getVolume(){
 
-    return 0;
+    return calVolume(this.radio, this.altura);
 
 
 }

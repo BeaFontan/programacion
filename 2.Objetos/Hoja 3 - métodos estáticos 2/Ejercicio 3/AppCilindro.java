@@ -4,9 +4,14 @@ public class AppCilindro {
         
     Cilindro cilindro1 = new Cilindro(20,5);
 
-    double area1 = cilindro1.calculaArea();
+    cilindro1.geTArea();
 
-    System.out.println(area1);
+    cilindro1.getVolume();
+
+    System.out.println(cilindro1.geTArea());
+    //Con el get area, que es el metodo que muestra el cálculo del área, te hace la llamada al método estático y te devuele el valor con el get, método no estático
+
+    System.out.println(cilindro1.getVolume());
 
     }
 }
