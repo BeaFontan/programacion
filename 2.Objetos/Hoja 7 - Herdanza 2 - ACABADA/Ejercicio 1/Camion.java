@@ -1,6 +1,6 @@
 public class Camion extends Vehiculo{
 
-    private int precioDia;
+    private double precioDia;
     private int diaInicio;
     private int diaFin;
 
@@ -8,23 +8,25 @@ public class Camion extends Vehiculo{
     private static int numCamionsAlugados = 0;
 
 
-    public Camion(String matricula, boolean alugado, int precioDia, int diaInicio, int diaFin) {
+    public Camion(String matricula, boolean alugado, double precioDia, int diaInicio, int diaFin) {
         super(matricula, alugado);
         this.precioDia = precioDia;
         this.diaInicio = diaInicio;
         this.diaFin = diaFin;
 
+        numCamions++;
+
     }
 
 
-    public int getPrecioDia() {
+    public double getPrecioDia() {
         return precioDia;
     }
 
 
     public void setPrecioDia(int precioDia) {
         this.precioDia = precioDia;
-    }
+    }////////////me quedé aquí
 
 
     public int getDiaInicio() {
@@ -71,21 +73,46 @@ public class Camion extends Vehiculo{
 
 
     //metodos
-    public void alugarCamion(){
+    public void alugarCamion(int diaInicio){
         if (getAlugado() == true) {
 
-            System.out.println("O camion está alugado");
+            System.out.println("O camion está alugado, elixe outro");
             
         }
         else{
             System.out.println("O camión está disponible");
             setAlugado(true);
+            this.diaInicio = diaInicio;
+
             numCamionsAlugados++;
 
         }
     }
 
-////////////me quedé aquí
+    public double devolverCamion(int diaFin){
+
+        double prezoAlquilerCamion;
+
+        int sumaDias = (diaFin - diaInicio);
+
+        prezoAlquilerCamion = precioDia * sumaDias;
+        numCamionsAlugados--;
+
+        setAlugado(false);//le indico con esto que ya no está alugado
+
+        return prezoAlquilerCamion;
+
+    }
+
+
+    public void mostrarInformacion(){
+
+        System.out.println(getMatricula() + " " + getAlugado() + " " + getPrecioDia() + " " +  getDiaInicio() + " " + getDiaFin());
+
+        System.out.println(Camion.getNumCamions() + " " + Camion.getNumCamionsAlugados());
+                        
+
+    }
 
 
 }

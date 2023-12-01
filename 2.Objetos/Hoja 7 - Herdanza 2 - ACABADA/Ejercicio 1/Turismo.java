@@ -1,6 +1,6 @@
 public class Turismo extends Vehiculo{
 
-    private int precioKm;
+    private double precioKm;
     private int kmAlquiler;
     private int kmDevolucion;
 
@@ -63,26 +63,30 @@ public class Turismo extends Vehiculo{
 
 
     //metodos
-    public void alugar(){
+    public void alugar(int kmAlquiler){
         if (getAlugado() == true) {
 
-            System.out.println("O vehículo está alugado");
+            System.out.println("O vehículo está alugado, elixe outro");
             
         }
         else{
             System.out.println("O vehículo está disponible" + getKmDevolucion());
             setAlugado(true);
+            this.kmAlquiler = kmAlquiler;
             numTurismosAlquilados++;
 
         }
     }
 
 
-    public int devolver(int kmAlquiler){
+    public double devolver(int kmDevolucion){
 
+        int kilometrosACobrar;
         double prezoAPagar;
 
-        prezoAPagar = kmAlquiler * precioKm;
+        kilometrosACobrar = kmDevolucion - kmAlquiler;
+
+        prezoAPagar = kilometrosACobrar * precioKm;
         numTurismosAlquilados--;
 
         setAlugado(false);//le indico con esto que ya no está alugado
@@ -99,12 +103,6 @@ public class Turismo extends Vehiculo{
                           //De ambas formas es correcto.
 
     }
-
-
-
-
-
-
 
     
 }
