@@ -1,3 +1,5 @@
+
+
 public class Impresora {
 
     private int precio;
@@ -5,7 +7,7 @@ public class Impresora {
     private int hojasMinuto;
     
     public Impresora(){
-        precio = 0.0;
+        precio = 0;
         modelo = "Sin nombre";
         hojasMinuto = 0;
     
@@ -46,23 +48,23 @@ public class Impresora {
     }
 
 
-    //REDIFINAR EQUEALS()
-    public boolean equals(object obj){
+    //REDIFINAR EQUALS()
+    public boolean equals(Object obj){
         //primero compruebo si existe dicho objeto
         if (obj == null){ //si el objeto es igual nulo
+           
             return false; //devuelve falso
         }
 
         //Ahora compruebo que existe esa clase
         if (obj.getClass() != this.getClass()){ // si la clase, es distinta a esta clase
+           
             return false; // devuelve falso
         }
-return false;
+            
         //Ahora convierto el object a Impresora.
         Impresora imp = (Impresora) obj;
 
-
-     
 
         //comparar si son iguales, con una diferencia menor que 10 consideramos que es igual
         if (Math.abs(imp.precio - this.precio) > 10) { //si el resultado entero de imp 1 - imp 2 (MATH.ABS) es mayor a 10
@@ -75,16 +77,17 @@ return false;
             return false;
         }
 
-
-
         return true;//
 
     }
 
 
-
     //REDEFINIR GETHUSH()
 
+    //sobreescribimos el método hashcode para que si dos objetos son iguales, devuelvan el mismo hash
+    public int hashCode() {
+        return this.precio;//Los dos devuelven el mismo hash
+     }
 
 
 
