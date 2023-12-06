@@ -18,7 +18,7 @@ public class AppString1_2 {
         System.out.println("A a está na posición "+ posicion);
 
 
-        C
+        
 
 
 
