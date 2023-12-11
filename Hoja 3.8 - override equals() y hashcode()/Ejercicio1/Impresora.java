@@ -1,4 +1,6 @@
+package Ejercicio1;
 
+import java.util.Objects;
 
 public class Impresora {
 
@@ -85,9 +87,10 @@ public class Impresora {
     //REDEFINIR GETHUSH()
 
     //sobreescribimos el método hashcode para que si dos objetos son iguales, devuelvan el mismo hash
-    public int hashCode() {
-        return this.precio;//Los dos devuelven el mismo hash
-     }
+    @Override
+    public int hashCode(){
+            return Objects.hash(precio,hojasMinuto);
+        }
 
 
 

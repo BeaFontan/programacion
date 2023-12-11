@@ -18,10 +18,14 @@ class AppTrabajador {
         //llamo al atributo estático de Trabajador para ver el número de trabajadores creados
         System.out.println(Traballador.getNumTraballadores());
 
+System.out.println(cond1.getNome() + cond1.getApelidos() + cond1.getDni() + cond1.getMatricula());
+
         cond1.setDni("DNIcambiado");
         cond1.setNome("Nome cambiado");
         cond1.setApelidos("Apelido cambiado");
         cond1.setMatricula("matrícula cambiada");
+System.out.println(cond1.getNome() + cond1.getApelidos() + cond1.getDni() + cond1.getMatricula());
+
 
         System.out.println(Traballador.getNumTraballadores());
 

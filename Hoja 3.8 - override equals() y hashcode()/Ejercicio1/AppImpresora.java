@@ -1,4 +1,4 @@
-
+package Ejercicio1;
 
 public class AppImpresora {
 
@@ -21,7 +21,7 @@ public class AppImpresora {
 
         System.out.println(imp2.hashCode());
 
-        System.out.println(imp2.hashCode());
+        System.out.println(imp3.hashCode());
 
 
 
