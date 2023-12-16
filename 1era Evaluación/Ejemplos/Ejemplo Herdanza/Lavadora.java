@@ -20,4 +20,8 @@ public class Lavadora extends Electrodomestico{
         return carga;
     }
 
+    public void setCarga(int carga) {
+        this.carga = carga;
+    }
+
 }

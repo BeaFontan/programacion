@@ -41,7 +41,10 @@ class AppPlaneta {
 
     System.out.println(planeta.getAccesible() + " " + planeta.getNome() + " " + planeta.getTamanho() + " " + planeta.getAccesible());
 
+        System.out.println("__________________________");
+        habitable.listarTodo();
 
+    System.out.println("__________________________");
 
     System.out.println(Planeta.getNumPlanetasAccesibles());
 

@@ -29,9 +29,8 @@ public class Electrodomestico {
     }
 
     public void setPrezo(int prezo) {
-        this.prezo = prezo;
-    }
-
+    this.prezo = prezo;
+}
 
 
 
